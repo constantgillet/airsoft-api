@@ -1,0 +1,21 @@
+// Bootstrap
+// ---------------------------------------------------
+
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+@import '~bootstrap/scss/bootstrap';
+
+@import '~toastr/build/toastr.min.css';
+
+@import '~owl.carousel/dist/assets/owl.carousel.css';
+
+// Variables and Mixins
+// ---------------------------------------------------
+
+@import 'fonts/fonts';
+@import 'components/components';
+@import './typos.scss';
+
+body {
+    background: #fff;
+}

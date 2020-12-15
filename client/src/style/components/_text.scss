@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+
+}
+
+// * {
+//     font-size: 15px;
+//     line-height: 1.428;
+//  }
+
+
+h1, .h1 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    position: relative;
+}
+
+p {
+    font-size: 14px;
+}
+
+.text-no-transform {
+    text-transform: none !important;
+}

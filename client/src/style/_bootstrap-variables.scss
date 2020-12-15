@@ -1,0 +1,89 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+//
+// Color system
+//
+
+// stylelint-disable
+$white:    #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #373B53 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$grays: () !default;
+$grays: map-merge((
+        "100": $gray-100,
+        "200": $gray-200,
+        "300": $gray-300,
+        "400": $gray-400,
+        "500": $gray-500,
+        "600": $gray-600,
+        "700": $gray-700,
+        "800": $gray-800,
+        "900": $gray-900
+), $grays);
+
+$blue:    #007bff !default;
+$lightblue: #74B9FF !default;
+$indigo:  #6610f2 !default;
+$purple:  #6F52ED !default;
+$pink:    #e83e8c !default;
+$red:     #FF4C61 !default;
+$orange:  #FFB800 !default;
+$yellow:  #ffc107 !default;
+$green:   #33D69F !default;
+$teal:    #20c997 !default;
+$cyan:    #21B8C7 !default;
+
+$colors: () !default;
+$colors: map-merge((
+        "blue":       $blue,
+        "lightblue": $lightblue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800
+), $colors);
+
+//https://flatuicolors.com/palette/es
+$primary:       #146cda !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $orange !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          #10233A !default;
+$facebookColor: #4267B2 !default;
+$twitterColor:rgb(29, 161, 242)!default;
+$linkedinColor: #4875B4 !default;
+$googleColor: #DB4437 !default;
+$primary-80: rgba($primary, 0.8) !default;
+$primary-60: rgba($primary, 0.6) !default;
+$background-color: #F2F2F2;
+$dark-60: #707B89;
+
+//Fonts
+$font-family-sans-serif: 'Open Sans', system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:       $font-family-sans-serif !default;

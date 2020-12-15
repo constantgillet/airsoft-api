@@ -1,0 +1,16 @@
+// Variables and Mixins
+// ---------------------------------------------------
+@import 'bootstrap-variables';
+@import 'variables';
+
+// Bootstrap
+// ---------------------------------------------------
+
+@import '~bootstrap/scss/functions';
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+//custom
+@import 'typos-mixins';
+

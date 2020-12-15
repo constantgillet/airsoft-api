@@ -1,0 +1,25 @@
+.icon-xs, .icon-sm, .icon-md, .icon-lg {
+    text-align: center;
+}
+
+.icontext .icon {
+    margin-right: 10px;
+}
+
+.icon-sm {
+    width: 48px;
+    height: 48px;
+    line-height: 48px !important;
+    font-size: 20px;
+}
+
+
+.icontext {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    vertical-align: middle;
+}

@@ -1,0 +1,64 @@
+.no-dropdown-icon::after {
+    display:none;
+}
+
+.dropdown-item {
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+}
+
+.dropdown-item:hover, .dropdown-item::selection {
+    color: white;
+    background: $primary;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    border: 1.5px solid #F2F3F7;
+    border-radius: 4px;
+    filter: drop-shadow(0px 5px 14px rgba(0, 0, 0, 0.10));
+    padding: 8px 8px;
+
+    .dropdown-item {
+        margin-top: 4px;
+        margin-bottom: 4px;
+        padding: 0.45rem 1.5rem;
+    }
+
+    li {
+        font-size: 14px;
+    }
+}
+
+
+.bootstrap-select > .dropdown-toggle {
+    line-height: 42px;
+    padding: 0 25px;
+    color: $dark;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0px;
+    top: 0px;
+    background: #f3f3f3;
+    cursor: pointer;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.bootstrap-select .dropdown-menu {
+    padding: 12px;
+
+    .dropdown-item {
+        margin: 6px 0;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            border-radius: 4px;
+        }
+    }
+}
