@@ -19,6 +19,12 @@ export = async (req: any, res: any) => {
     reference.image = '/uploads/' + fileNameToJPG(req.file.filename);
 
     reference.create();
+
+    return res.status(201).json({
+        code: 201,
+        status: 'success',
+        message: 'Reference created'
+    });
 };
 
 
