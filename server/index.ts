@@ -1,4 +1,5 @@
 import * as dotenv from 'dotenv';
+import path from 'path';
 dotenv.config();
 
 import express from 'express';
@@ -14,6 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(router);
+app.use('/uploads', express.static(path.join(__dirname, '/uploads/')));
 
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
