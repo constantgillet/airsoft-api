@@ -1,9 +1,11 @@
 import Reference from '../models/Reference';
+import {resizeImage, fileNameToJPG} from '../helpers/imageHelper';
 
 export = async (req: any, res: any) => {
-    res.json('ok')
 
     const reference = new Reference();
+
+    resizeImage(req.file.path, 'uploads/' + req.file.filename);
 
     reference.name = req.body.name;
     reference.category = req.body.category;
@@ -14,7 +16,9 @@ export = async (req: any, res: any) => {
     reference.length = req.body.length;
     reference.familly = req.body.familly;
     reference.category = req.body.category;
-    reference.familly = 'test, ENT ENT';
+    reference.image = '/uploads/' + fileNameToJPG(req.file.filename);
 
     reference.create();
 };
+
+
