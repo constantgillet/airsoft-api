@@ -1,0 +1,31 @@
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .logo{
+        display: flex;
+        align-items: center;
+        width: 20%;
+        .logo_img{
+            width: 100px;
+        }
+    }
+    .link_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        a {
+            color: $black;
+        }
+        .link_blue{
+            color: $white;
+            background-color: $primary;
+            border-radius: $radius_1;
+            padding: $padding_soft $padding_medium;
+        }
+    }
+}
+
+
