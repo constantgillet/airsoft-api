@@ -39,10 +39,15 @@ FONT
 // $font-size-subtitle: 24px;
 // $font-size-title: 48px;
 
-@mixin text-title {
+@mixin page-title {
     font-weight: 700;
     font-size: 48px;
     line-height: 30px;
+}
+
+@mixin text-title {
+    font-weight: 400;
+    font-size: 48px;
 }
 
 @mixin text-subtitle {
