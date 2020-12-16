@@ -15,6 +15,7 @@ $fuchsia: #f012be !default;
 $purple: #605ca8 !default;
 $maroon: #d81b60 !default;
 $black: #111 !default;
+$dark: #10233A !default;
 $gray-x-light: #d2d6de !default;
 
 $colors: map-merge((
@@ -34,6 +35,11 @@ RADIUS
 **/
 $radius-1: 4px;
 $radius-2: 8px;
+
+$padding_ultrasoft: 0.3%;
+$padding_soft: 1%;
+$padding_medium: 3%;
+$padding_10: 10%;
 
 /**
 SHADOWS
