@@ -1,14 +1,15 @@
 import express from 'express';
 const router = express.Router();
-import TestController from './controllers/test.controller';
+
+import addReferenceController from './controllers/addReference.controller';
+
+import {addReferenceValidation} from './validators/addReference.validator';
+import {addReferenceUpload} from './validators/uploadReference.validator';
 
 /// ROUTES ///
 
-// GET home page.
-router.get('/', TestController.test);
-
 //Create a reference
-router.post('/references');
+router.post('/references', addReferenceUpload, addReferenceValidation, addReferenceController);
 
 //Get references
 router.get('/references');
