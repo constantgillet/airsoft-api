@@ -15,6 +15,7 @@ export = async (req: any, res: any) => {
             message: 'You got the reference',
             data: {
                 reference: {
+                    name: reference.name,
                     category: reference.category,
                     status: reference.status,
                     brand: reference.brand,
