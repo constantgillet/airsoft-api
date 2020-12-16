@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 8000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//routes
 app.use(router);
 app.use('/uploads', express.static(path.join(__dirname, '/uploads/')));
 
