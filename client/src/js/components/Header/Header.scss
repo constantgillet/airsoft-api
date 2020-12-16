@@ -18,6 +18,8 @@
         width: 50%;
         a {
             color: $black;
+            @include text-hugebody;
+            font-weight: 700;
         }
         .link_blue{
             color: $white;

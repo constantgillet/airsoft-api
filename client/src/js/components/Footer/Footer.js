@@ -10,13 +10,13 @@ export default function Footer() {
                 <div className="social_description text-subtitle">Suivez nous sur les réseaux sociaux!</div>
                 <div className="media_container">
                     {/* Facebook */}
-                    <a href="" className="link_header text-subtitle"><i className="fab fa-facebook-f"></i></a>
+                    <a href="" className="link_header"><i className="fab fa-facebook-f"></i></a>
                     {/* Twitter */}
-                    <a href="" className="link_header text-subtitle"><i className="fab fa-twitter"></i></a>
+                    <a href="" className="link_header"><i className="fab fa-twitter"></i></a>
                     {/* Linkedin */}
-                    <a href="" className="link_header text-subtitle"><i className="fab fa-linkedin-in"></i></a>
+                    <a href="" className="link_header"><i className="fab fa-linkedin-in"></i></a>
                     {/* Instagram */}
-                    <a href="" className="link_header text-subtitle"><i className="fab fa-instagram"></i></a>
+                    <a href="" className="link_header"><i className="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div className="footer_content">

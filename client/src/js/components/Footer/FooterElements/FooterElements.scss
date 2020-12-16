@@ -3,6 +3,8 @@
     width: 15%;
     .title {
         color: $white;
+        @include text-hugebody;
+        font-weight: 700;
         img{
             width: 100px;
         }
@@ -15,6 +17,7 @@
 
     }
     .description{
-        color: $white
+        color: $white;
+        @include text-body;
     }
 }

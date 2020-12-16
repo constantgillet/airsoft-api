@@ -1,0 +1,42 @@
+.doc-component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 10vh 0;
+    padding: 5rem 14rem;
+    background-color: #146CDA;
+    color: white;
+
+        .title-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            padding-right: 50px;
+            border-right: 1px solid white
+        }
+
+        .doc-body {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            margin-left: 50px;
+
+            h5 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .doc-button {
+            margin-top: 1rem;
+            padding: 8px 40px;
+            border: 1px solid white;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .doc-button:hover {
+            border: 1px solid #146CDA;
+            background-color: white;
+            color: #146CDA;
+        }
+}
