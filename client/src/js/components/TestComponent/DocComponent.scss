@@ -1,12 +1,13 @@
 @import '../../../style/_variables.scss';
+@import '../../../style/bootstrap-variables';
 
 .doc-main-component {
     display: flex;
     justify-content: center;
     margin: 10vh 0;
     padding: 5rem 14rem;
-    background-color: #146CDA;
-    color: white;
+    background-color: $primary;
+    color: $white;
 
     .doc-component {
         display: flex;
@@ -19,7 +20,7 @@
                 flex-flow: row wrap;
                 justify-content: center;
                 padding-right: 50px;
-                border-right: 1px solid white;
+                border-right: 1px solid $white;
                 
                 .title {
                     @include text-title;
@@ -52,15 +53,15 @@
                 .doc-button {
                     margin-top: 1rem;
                     padding: 8px 40px;
-                    border: 1px solid white;
+                    border: 1px solid $white;
                     border-radius: 5px;
                     font-weight: 700;
                 }
         
                 .doc-button:hover {
-                    border: 1px solid #146CDA;
-                    background-color: white;
-                    color: #146CDA;
+                    border: 1px solid $primary;
+                    background-color: $white;
+                    color: $primary;
                 }
             }
     }
