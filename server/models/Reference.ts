@@ -1,5 +1,3 @@
-import { type } from "os";
-
 type Status = -1 | 0 | 1 // -1 banned, 0 not verified, 1 verified  
 
 export default class Reference {
@@ -13,6 +11,7 @@ export default class Reference {
     weight: Number;
     length: Number;
     familly: String;
+    image: String;
     contributors: Array<Object>;
   
     constructor() {
@@ -26,10 +25,11 @@ export default class Reference {
         this.weight = 0;
         this.length = 0;
         this.familly = 'unknowned';
+        this.image = '';
         this.contributors = [];
     }
   
-    create = () => {}
-    delete = () => {}
-    update = () => {}
+    create = (): Boolean => {return false}
+    delete = (): Boolean => {return false}
+    update = (): Boolean => {return false}
 }
