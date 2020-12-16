@@ -56,6 +56,16 @@ export const addReferenceValidation = [
         .trim()
         .isEmail()
         .withMessage({name: 'invalidEmail', message: 'The email is not valid'}),
+
+    check('image')
+        .custom((value, {req}) => {
+            if(req.file.mimetype === 'image/png' || req.file.mimetype === 'image/jpg'){
+                return true; // return "non-falsy" value to indicate valid data"
+            }else{
+                return false; // return "falsy" value to indicate invalid data
+            }
+        })
+        .withMessage({name: 'invalidImageMimetype', message: 'Image is not valid'}),
         
     (req: any, res: any, next: any) => {
 

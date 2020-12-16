@@ -39,6 +39,6 @@ const upload = multer({
 });
 
 //Parse data of the form
-const addReferenceUpload = upload.fields([{name: 'image', maxCount: 1}])
+const addReferenceUpload = upload.single('image');
 
 export {addReferenceUpload}

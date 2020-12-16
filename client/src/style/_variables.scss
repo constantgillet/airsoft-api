@@ -16,6 +16,7 @@ $purple: #605ca8 !default;
 $maroon: #d81b60 !default;
 $black: #111 !default;
 $dark: #10233A !default;
+$lightdark: rgba($color: #10233A, $alpha: 0.9);
 $gray-x-light: #d2d6de !default;
 
 $colors: map-merge((
@@ -26,6 +27,40 @@ $colors: map-merge((
     'fuchsia': $fuchsia,
     'maroon': $maroon,
 ), $colors);
+
+
+/**
+FONT
+**/
+
+// $font-size-small: 12px;
+// $font-size-body: 14px;
+// $font-size-hugebody: 18px;
+// $font-size-subtitle: 24px;
+// $font-size-title: 48px;
+
+@mixin text-title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 30px;
+}
+
+@mixin text-subtitle {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+@mixin text-hugebody {
+    font-size: 18px;
+}
+
+@mixin text-body {
+    font-size: 14px;
+}
+
+@mixin text-small {
+    font-size: 12px;
+}
 
 // LAYOUT
 // --------------------------------------------------------
