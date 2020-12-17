@@ -5,7 +5,7 @@ import TextListElement from '../../components/TextListElement/TextListElement'
 import StatusRecap from '../../components/StatusRecap/StatusRecap'
 import './StatusPage.scss'
 
-export default function HomePage() {
+export default function StatusPage() {
 
     return (
         <div className="home-page">
@@ -17,6 +17,7 @@ export default function HomePage() {
                 <h1>Page de statut</h1>
             </div>
 
+            <div className="container">
             <StatusRecap/>
             
             <div className="main-container">
@@ -59,6 +60,7 @@ export default function HomePage() {
                         description="Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exmple. Mais ce n’est pas tout ! Vous pourrez retrouver des informations complémentaires comme des photos, des descriptions et plein d’autres informations. Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exemple. Mais ce n’est pas tout ! Vous pourrez retrouver des informations complémentaires comme des photos, des descriptions et plein d’autres informations. Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exemple. Mais ce n’est pas tout ! "
                     />
                 </div>
+            </div>
             </div>
 
             <div className="footer">

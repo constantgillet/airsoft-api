@@ -1,0 +1,142 @@
+@import '../../../style/_variables.scss';
+@import '../../../style/_typos.scss';
+@import '../../../style/bootstrap-variables.scss';
+
+.form-container {
+    margin: 4rem 0;
+    padding: 2rem 5rem;
+    background-color: $white;
+    border-radius: $radius-2;
+
+    h1 {
+        @include text-subtitle;
+    }
+
+    form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        .sub-container {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-items: center;
+            width: 45%;
+            margin: 0;
+            padding: 0;
+
+            .input-container {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                width: 100%;
+                padding-top: 2rem;
+
+                label {
+                    @include text-body;
+                }
+
+                input {
+                    padding: 7px;
+                    border: 1px solid $dark-40;
+                    border-radius: $radius-1;
+                }
+
+                input:focus {
+                    outline: none !important;
+                    border: 1px solid $twitterColor;
+                }
+            }
+
+            .mini-container {
+                display: flex;
+                flex-flow: row wrap;
+            }
+
+            .mini-sub-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                width: 100%;
+
+                .input-container {
+                    width: 45%;
+                }
+            }
+        }
+
+        .sub-container2 {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 45%;
+            margin: 0;
+            padding: 0;
+
+            .input-container {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                width: 100%;
+                padding-top: 2rem;
+
+                label {
+                    @include text-body;
+                }
+
+                input {
+                    padding: 7px;
+                    border: 1px solid $dark-40;
+                    border-radius: $radius-1;
+                }
+
+                input:focus {
+                    outline: none !important;
+                    border: 1px solid $twitterColor;
+                }
+
+                textarea {
+                    min-height: 20vh;
+                    padding: 7px;
+                    border: 1px solid $dark-40;
+                    border-radius: $radius-1;
+                }
+
+                textarea:focus {
+                    outline: none !important;
+                    border: 1px solid $twitterColor;
+                }
+            }
+            
+            .button-container {
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+
+                .button-blue {
+                    width: 40%;
+                    color: $white;
+                    background-color: $primary;
+                    border-radius: $radius_1;
+                    padding: $padding_soft $padding_medium;
+                    font-weight: 700;
+                }
+                .button-border-white {
+                    margin-top: 1rem;
+                    padding: 8px 40px;
+                    border: 1px solid $white;
+                    border-radius: 5px;
+                    font-weight: 700;
+                }
+                .button-border-white:hover {
+                    border: 1px solid $primary;
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

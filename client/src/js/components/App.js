@@ -3,6 +3,7 @@ import { Route, Switch, Router } from 'react-router-dom'
 import HomePage from '../pages/HomePage/HomePage'
 import PricingPage from '../pages/PricingPage/PricingPage'
 import StatusPage from '../pages/StatusPage/StatusPage'
+import AddGunPage from '../pages/AddGunPage/AddGunPage'
 
 function App(props) {
 
@@ -11,6 +12,7 @@ function App(props) {
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/pricing-page' component={PricingPage}/>
       <Route exact path='/StatusPage' component={StatusPage}/>
+      <Route exact path='/AddGunPage' component={AddGunPage}/>
     </div>
   );
 }
