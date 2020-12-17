@@ -3,7 +3,7 @@ import './Header.scss'
 
 export default function Header() {
     return (
-        <div className="header_container">
+        <div className="header_container container">
             <div className="logo">
                 <img src="/images/logo.png" className="logo_img" alt="logo_img"/>
             </div>

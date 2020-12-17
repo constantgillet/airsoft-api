@@ -2,6 +2,7 @@
     text-align: center;
     border-radius: $radius_2;
     padding: 2%;
+    margin: 0 1vw;
     width: 34%;
     h4{
         padding: 5%;
@@ -19,9 +20,7 @@
     };
 }
 .blue{
-    // J'arrive pas à mettre le filtre bleu :(
-    background-color: rgba($color: $primary, $alpha: 0.8);
-    background-image: url('/images/spectnaz_card.png');
+    background: linear-gradient(0deg, rgba(20, 108, 218, 0.67), rgba(20, 108, 218, 0.67)),url('/images/spectnaz_bg.png');
     color: $white;
 }
 .white{

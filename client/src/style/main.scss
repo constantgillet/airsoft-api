@@ -23,7 +23,6 @@ body {
 .header {
     background: $white;
     height: 73px;
-    padding: 0 10%;
     width: 100%;
     top: 0;
     position: fixed;
@@ -47,7 +46,6 @@ body {
 
 .pricing-main-container{
     width: 100%;
-    padding: 0 $padding_10;
     margin-bottom: 10vh;
     .pricing-title{
         position: relative;
@@ -67,9 +65,9 @@ body {
     }
     .pricing-cards{
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         margin: 0 auto;
-        width: 78%;
+        width: 75%;
     }
     .pricing-button{
         width: 100%;
