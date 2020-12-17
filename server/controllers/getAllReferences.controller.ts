@@ -3,8 +3,11 @@ import {parseESResultHits} from '../helpers/elasticSearchHelper';
 
 export = async (req: any, res: any) => {
 
-    const query = req.query['q'];
+    //Set query
+    const query: string = req.query.q;
 
+    //Set limit if it ewists in parameters, set to 8 if not
+    let limit: number = Number(req.query.limit) || 8;
 
     /**
      * QUERY FOR SEARCHING NAME
@@ -30,7 +33,7 @@ export = async (req: any, res: any) => {
     }
 
     let body = {
-        size: 8,
+        size: limit,
         from: 0, 
         query: {
             bool: {
