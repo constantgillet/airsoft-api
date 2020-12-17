@@ -78,6 +78,7 @@ export default class Reference {
 
                 return true;
             } else {
+                console.log(this)
                 return false;
             }
         } catch (err) {

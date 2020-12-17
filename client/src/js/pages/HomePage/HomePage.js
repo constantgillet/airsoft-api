@@ -77,7 +77,7 @@ export default function HomePage() {
             <div className="pricing-main-container">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
-                    Pricing et plans
+                    Tarifs et plans
                 </h2>
                 <div className="pricing-cards">
                     <PricingCards

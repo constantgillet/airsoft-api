@@ -26,7 +26,7 @@ export default function Header() {
                     className="button-link-header"
                     link="/pricing"
                     alt="Pricing"
-                    text="Pricing"
+                    text="Tarifs"
                 />
                 <LinkPage 
                     className="button-blue"

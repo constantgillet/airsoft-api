@@ -1,5 +1,6 @@
 import express from 'express';
 const router = express.Router();
+import rateLimitMiddleware from './helpers/ratelimit';
 
 import addReferenceController from './controllers/addReference.controller';
 import getReferenceController from './controllers/getReference.controller';
@@ -18,10 +19,10 @@ import {getAllReferencesValidation} from './validators/getAllReferences.validato
 router.post('/references', addReferenceUpload, addReferenceValidation, addReferenceController);
 
 //Get references
-router.get('/references', getAllReferencesValidation, getAllReferencesController);
+router.get('/references', rateLimitMiddleware, getAllReferencesValidation, getAllReferencesController);
 
 //Get references
-router.get('/references/:id', getReferenceValidation, getReferenceController);
+router.get('/references/:id', rateLimitMiddleware, getReferenceValidation, getReferenceController);
 
 //Update references
 router.put('/references/:id');

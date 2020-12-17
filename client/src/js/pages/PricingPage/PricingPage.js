@@ -19,7 +19,7 @@ export default function PricingPage() {
             <div className="pricing-main-container margin-top">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
-                    Pricing et plans
+                    Tarifs et plans
                 </h2>
                 <div className="pricing-cards-2">
                     <PricingCards
@@ -40,8 +40,8 @@ export default function PricingPage() {
                         className="pricing-card-container-2 white"
                         title="Abonnement"
                         subtitle="Abonnez vous pour profiter des avantages"
-                        firstArgument="Accédez à l'API en illimité pour XX€ par mois"
-                        secondArgument="Payez à l'utilisation afin d'avoir plus de flexibilités"
+                        firstArgument="Accédez à l'API en illimité pour 7€ par mois"
+                        secondArgument="Payez 70€ par an afin de profiter d'une réduction"
                         description="Accédez à notre service sans avoir besoin de contribuer"
                     />
                     <LinkPage 

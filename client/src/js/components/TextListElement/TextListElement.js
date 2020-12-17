@@ -1,5 +1,5 @@
 import React from 'react'
-import './TestListElement.scss'
+import './TextListElement.scss'
 
 export default function TextListElement({date, description}) {
   return (
