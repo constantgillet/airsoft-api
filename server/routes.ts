@@ -3,6 +3,7 @@ const router = express.Router();
 
 import addReferenceController from './controllers/addReference.controller';
 import getReferenceController from './controllers/getReference.controller';
+import getAllReferencesController from './controllers/getAllReferences.controller';
 
 import {addReferenceValidation} from './validators/addReference.validator';
 import {addReferenceUpload} from './validators/uploadReference.validator';
@@ -16,7 +17,7 @@ import {getReferenceValidation} from './validators/getReference.validator';
 router.post('/references', addReferenceUpload, addReferenceValidation, addReferenceController);
 
 //Get references
-router.get('/references');
+router.get('/references', getAllReferencesController);
 
 //Get references
 router.get('/references/:id', getReferenceValidation, getReferenceController);
