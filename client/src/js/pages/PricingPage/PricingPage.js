@@ -17,30 +17,42 @@ export default function PricingPage() {
                 <h1>Pricing</h1>
             </div>
 
-            <div className="pricing-main-container">
+            <div className="pricing-main-container margin-top">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
                     Pricing et plans
                 </h2>
-                <div className="pricing-cards">
+                <div className="pricing-cards-2">
                     <PricingCards
-                        className="pricing-card-container blue"
+                        className="pricing-card-container-2 blue"
                         title="Programme de contribution"
-                        subtitle="Contribuez pour profiter des avantages"
+                        subtitle="Contribuez pour profiter de l'ensemble des fonctionnalités de l'API gratuitement"
                         firstArgument="Bénéficiez d'un accès gratuit à l'API"
                         secondArgument="Les contributions sont contrôlées par la modération"
                         description="C'est aussi un moyen de nous soutenir, alors n'hésitez plus ! "
                     />
+                    <LinkPage 
+                        className="doc-button absolute"
+                        link="/Contribute"
+                        alt="contribute"
+                        text="Contribuer"
+                    />
                     <PricingCards
-                        className="pricing-card-container white"
+                        className="pricing-card-container-2 white"
                         title="Abonnement"
                         subtitle="Abonnez vous pour profiter des avantages"
                         firstArgument="Accédez à l'API en illimité pour XX€ par mois"
                         secondArgument="Payez à l'utilisation afin d'avoir plus de flexibilités"
                         description="Accédez à notre service sans avoir besoin de contribuer"
                     />
+                    <LinkPage 
+                        className="button-blue absolute-2"
+                        link="/"
+                        alt="contact"
+                        text="Nous contacter"
+                    />
                 </div>
-                <div className="pricing-button">
+                {/* <div className="pricing-button">
                     <LinkPage 
                         className="button-blue"
                         //Go to pricing page
@@ -48,7 +60,7 @@ export default function PricingPage() {
                         alt="link"
                         text="Les tarifs"
                     />
-                </div>
+                </div> */}
             </div>
 
             <div className="footer">

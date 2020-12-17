@@ -17,17 +17,6 @@
         justify-content: space-between;
         align-items: center;
         width: 50%;
-        a {
-            color: $black;
-            @include text-hugebody;
-            font-weight: 700;
-        }
-        .link_blue{
-            color: $white;
-            background-color: $primary;
-            border-radius: $radius_1;
-            padding: $padding_soft $padding_medium;
-        }
     }
 }
 
