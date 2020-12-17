@@ -22,7 +22,7 @@ export default function StatusPage() {
             
             <div className="main-container">
                 <div className="sub-container">
-                    <h1>Status history</h1>
+                    <h1>Historique du statut</h1>
                     <TextListElement
                         date="Dec 15, 2020"
                         description="Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exmple. Mais ce n’est pas tout ! Vous pourrez retrouver des informations complémentaires comme des photos, des descriptions et plein d’autres informations. Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exemple. Mais ce n’est pas tout ! Vous pourrez retrouver des informations complémentaires comme des photos, des descriptions et plein d’autres informations. Récupérer aisément des données comme le modèle, la catégorie, la marque ou la puissance d’une réplique d’Airsoft par exemple. Mais ce n’est pas tout ! "

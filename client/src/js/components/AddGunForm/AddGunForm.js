@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './AddGunForm.scss'
+import 'bootstrap-select';
 
 
 class Form extends Component {
@@ -14,7 +15,7 @@ class Form extends Component {
                 power: "",
                 weight: "",
                 length: "",
-                date: "",
+                category: "revolver",
                 description: "",
                 file: ""
             }
@@ -44,9 +45,9 @@ class Form extends Component {
         })
     }
 
-    handleDateChange = (event) => {
+    handleCategoryChange = (event) => {
         this.setState({
-            date: event.target.value
+            category: event.target.value
         })
     }
 
@@ -74,9 +75,10 @@ class Form extends Component {
         })
     }
 
-    // handleSubmit= (event) => {
-
-    // }
+    handleSubmit= (event) => {
+        alert(`${this.state.gunName} ${this.state.reference} ${this.state.manufacturer} ${this.state.power} ${this.state.weight} ${this.state.length} ${this.state.category} ${this.state.description} ${this.state.file}`)
+        event.preventDefault()
+    }
 
     render() {
         return (
@@ -129,13 +131,20 @@ class Form extends Component {
                                     </div>
                                 </div>
                                 <div className="mini-sub-container">
-                                    <div className="input-container">                                  
-                                        <label>Date de fabrication</label>
-                                        <input 
-                                            type="text" 
-                                            value={this.state.date}
-                                            onChange={this.handleDateChange}
-                                        />
+                                    <div className="input-container">
+                                        <label>Catégorie</label>                             
+                                        <select value={this.state.category} onChange={this.handleCategoryChange}>
+                                            <option value="Revolver">Révolver</option>
+                                            <option value="AEGRifle">Réplique longues AEG</option>
+                                            <option value="GBBRRifle">Réplique longues GBBR</option>
+                                            <option value="GGBGun">Réplique de poing GBB</option>
+                                            <option value="NBBGun">Réplique de poing NBB</option>
+                                            <option value="AEPGun">Réplique de poing AEP</option>
+                                            <option value="GasSniperRifle">Réplique de sniper gaz</option>
+                                            <option value="SpringSniperRifle">Réplique de sniper spring</option>
+                                            <option value="SpringShotgun">Réplique à pompe spring</option>
+                                            <option value="GasShotgun">Réplique à pompe gaz</option>
+                                        </select>
                                     </div>
                                     <div className="input-container">
                                         <label>Longueur (cm)</label>
@@ -157,7 +166,7 @@ class Form extends Component {
                                 onChange={this.handleDescriptionChange}
                             ></textarea>
                         </div>
-
+                        
                         <div className="input-container">
                             <label>Joindre une image</label>
                             <input
