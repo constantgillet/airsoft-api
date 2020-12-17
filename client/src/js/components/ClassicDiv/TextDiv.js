@@ -1,5 +1,6 @@
 import React from 'react'
 import './TextDiv.scss'
+import LinkPage from '../../components/LinkPages/LinkPages'
 
 export default function TextDiv({title, subtitle, bodyTitle, body1, body2, button}) {
   return (
@@ -14,9 +15,12 @@ export default function TextDiv({title, subtitle, bodyTitle, body1, body2, butto
             <p>{body1}</p>
             <p>{body2}</p>
             <div className="doc-button-container">
-              <div className="doc-button">
-                  {button}
-              </div>
+              <LinkPage 
+                className="doc-button"
+                link="/Documentation"
+                alt="Doc"
+                text={button}
+              />
             </div>
           </div>
         </div>

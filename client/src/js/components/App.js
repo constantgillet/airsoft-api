@@ -9,7 +9,7 @@ function App(props) {
   return (
     <div>
       <Route exact path='/' component={HomePage}/>
-      <Route exact path='/pricing-page' component={PricingPage}/>
+      <Route exact path='/PricingPage' component={PricingPage}/>
       <Route exact path='/StatusPage' component={StatusPage}/>
     </div>
   );

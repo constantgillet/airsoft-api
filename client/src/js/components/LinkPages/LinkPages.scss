@@ -4,6 +4,12 @@
     border-radius: $radius_1;
     padding: $padding_soft $padding_medium;
     font-weight: 700;
+    text-decoration: none;
+}
+.button-blue:hover{
+    background-color: $white;
+    color: $primary;
+    text-decoration: none;
 }
 .button-border-white{
     margin-top: 1rem;
@@ -16,4 +22,35 @@
     border: 1px solid $primary;
     background-color: $white;
     color: $primary;
+}
+.button-link-header{
+    color: $black;
+    @include text-hugebody;
+    font-weight: 700;
+    text-decoration: none;
+}
+.doc-button {
+    margin-top: 1rem;
+    padding: 8px 40px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    font-weight: 700;
+    color: $white;
+}
+
+.doc-button:hover {
+    border: 1px solid $primary;
+    background-color: $white;
+    color: $primary;
+    text-decoration: none;
+}
+.absolute{
+    position: absolute;
+    right: 20%;
+    top: 32.8%;
+}
+.absolute-2{
+    position: absolute;
+    right: 20%;
+    top: 90%;
 }
