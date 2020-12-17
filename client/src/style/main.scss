@@ -17,13 +17,63 @@
 @import './typos.scss';
 
 body {
-    background: #fff;
+    background: #F2F2F2;
 }
 
 .header {
     background: $white;
     height: 73px;
-    padding: 0 10%;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.background-title-image{
+    background-image: url('/images/spectnaz_bg.png');
+    width: 100%;
+    height: 35vh;
+    margin-top: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1{
+        color: $white;
+        font-size: 48px;
+        font-weight: 800;
+    }
+}
+
+.pricing-main-container{
+    width: 100%;
+    margin-bottom: 10vh;
+    .pricing-title{
+        position: relative;
+        text-align: center;
+        font-weight: 650;
+        font-size: 36px;
+        margin-bottom: 10vh;
+        .pricing-line{
+            background-color: $primary;
+            top: 50%;
+            left: -15%;
+            position: absolute;
+            height: 1px;
+            width: 50%;
+            margin: 5px 0 10px 0;
+        }
+    }
+    .pricing-cards{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        width: 75%;
+    }
+    .pricing-button{
+        width: 100%;
+        margin: 7vh 0;
+        text-align: center;
+    }
 }
 
 .footer{

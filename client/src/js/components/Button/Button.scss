@@ -1,0 +1,19 @@
+.button-blue{
+    color: $white;
+    background-color: $primary;
+    border-radius: $radius_1;
+    padding: $padding_soft $padding_medium;
+    font-weight: 700;
+}
+.button-border-white{
+    margin-top: 1rem;
+    padding: 8px 40px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.button-order-white:hover{
+    border: 1px solid $primary;
+    background-color: $white;
+    color: $primary;
+}
