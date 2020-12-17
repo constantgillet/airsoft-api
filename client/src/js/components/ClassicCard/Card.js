@@ -1,5 +1,5 @@
 import React from 'react'
-import './CardComponent.scss'
+import './Card.scss'
 
 export default function CardContainer({imageUnactive, imageActive, title, body}) {
   return (

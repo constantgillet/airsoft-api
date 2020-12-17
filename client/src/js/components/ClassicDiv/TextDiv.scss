@@ -1,0 +1,68 @@
+@import '../../../style/_variables.scss';
+@import '../../../style/bootstrap-variables';
+
+.doc-main-component {
+    display: flex;
+    justify-content: center;
+    margin: 10vh 0;
+    padding: 5rem 14rem;
+    background-color: $primary;
+    color: $white;
+
+    .doc-component {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        max-width: 70rem;
+    
+            .title-container {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                padding-right: 50px;
+                border-right: 1px solid $white;
+                
+                .title {
+                    @include text-title;
+                }
+
+                .subtitle {
+                    @include text-subtitle;
+                }
+            }
+    
+            .doc-body {
+                display: flex;
+                flex-flow: row wrap;
+                margin-left: 50px;
+
+                h5 {
+                    margin-bottom: 1rem;
+                    @include text-subtitle;
+                }
+                p {
+                    @include text-body;
+                }
+            }
+    
+            .doc-button-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+    
+                .doc-button {
+                    margin-top: 1rem;
+                    padding: 8px 40px;
+                    border: 1px solid $white;
+                    border-radius: 5px;
+                    font-weight: 700;
+                }
+        
+                .doc-button:hover {
+                    border: 1px solid $primary;
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+    }
+}

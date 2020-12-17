@@ -1,0 +1,40 @@
+.main-container {
+    width: 80%;
+    margin: 4rem auto;
+    padding: 3rem 0;
+    background-color: $white;
+
+    .sub-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+
+        .status-component {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            width: 20%;
+            font-size: 18px;
+            font-weight: 600;
+
+            h5 {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+            img {
+                margin: 0.75rem 0;
+            }
+
+            p {
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+}

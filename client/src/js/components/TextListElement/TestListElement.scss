@@ -1,0 +1,22 @@
+@import '../../../style/_variables.scss';
+@import '../../../style/_typos.scss';
+@import '../../../style/bootstrap-variables.scss';
+
+.block-container {
+    border-top: 1px solid $dark-40;
+
+    .block-body {
+        .date {
+            @include text-body;
+            margin-top: 0.5rem;
+            font-weight: 100;
+            color: $dark-60;
+        }
+
+        .text {
+            @include text-small;
+            font-weight: 200;
+            color: $dark-80;
+        }
+    }
+}
