@@ -1,0 +1,30 @@
+.pricing-card-container{
+    text-align: center;
+    border-radius: $radius_2;
+    padding: 2%;
+    width: 34%;
+    h4{
+        padding: 5%;
+        @include text-subtitle;
+    }
+    div{
+        padding: 5%;
+        @include text-hugebody;
+        font-weight: 700;
+    }
+    li{
+        padding: 1%;
+        text-align: left;
+        @include text-hugebody;
+    };
+}
+.blue{
+    // J'arrive pas à mettre le filtre bleu :(
+    background-color: rgba($color: $primary, $alpha: 0.8);
+    background-image: url('/images/spectnaz_card.png');
+    color: $white;
+}
+.white{
+    color: $primary;
+    background-color: $white;
+}
