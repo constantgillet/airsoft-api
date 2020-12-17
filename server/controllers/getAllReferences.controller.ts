@@ -7,9 +7,11 @@ export = async (req: any, res: any) => {
     const query: string = req.query.q;
 
     //Set limit if it ewists in parameters, set to 8 if not
-    let limit: number = Number(req.query.limit) || 8;
+    const limit: number = Number(req.query.limit) || 8;
 
-    let orderBy: string | null = req.query.order_by
+    const orderBy: string | null = req.query.order_by;
+
+    let category: string = req.query.category;
 
     /**
      * QUERY FOR SEARCHING NAME
@@ -94,13 +96,28 @@ export = async (req: any, res: any) => {
             break;
     }
 
+    /**
+     * CATEGORY 
+     */
+    //Filters, type object
+    const _filters: { term?: object, terms?: object }[] = [
+        {term: { status: '0' }}
+    ]
+
+    //add category to filters
+    if (category) {
+        category = category.toLowerCase();
+        _filters.push({term: { category: category }})
+    }
+
     let body = {
         size: limit,
         from: 0,
         sort: _sort,
         query: {
             bool: {
-                must : _must
+                must: _must,
+                filter: _filters
             }
         }
     }
@@ -109,8 +126,6 @@ export = async (req: any, res: any) => {
     elasticSearchClient.search({index:'airsoft-api-references',  body:body, type:'object'})
 
     .then(async (results: any) => {
-
-        console.log(results)
 
         return res.status(200).json({
             code: 200,
@@ -123,7 +138,15 @@ export = async (req: any, res: any) => {
     })
     .catch((err: any) =>{
         console.log(err)
-        res.send([]);
+        res.status(400).json({
+            code: 400,
+            status: 'error',
+            message: 'An error has happened',
+            error: {
+                name: 'internalError',
+                message: 'An internal error happend'
+            }
+        });
     });
 
     
