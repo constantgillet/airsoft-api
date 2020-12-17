@@ -7,16 +7,16 @@ export = async (req: any, res: any) => {
 
     resizeImage(req.file.path, 'uploads/' + req.file.filename);
 
-    reference.name = req.body.name;
-    reference.category = req.body.category;
-    reference.brand = req.body.brand;
-    reference.power = req.body.power;
-    reference.price = req.body.price;
-    reference.weight = req.body.weight;
-    reference.length = req.body.length;
-    reference.familly = req.body.familly;
-    reference.category = req.body.category;
-    reference.image = '/uploads/' + fileNameToJPG(req.file.filename);
+    reference.name = String(req.body.name);
+    reference.category = String(req.body.category);
+    reference.brand = String(req.body.brand);
+    reference.power = Number(req.body.power);
+    reference.price = Number(req.body.price);
+    reference.weight = Number(req.body.weight);
+    reference.length = Number(req.body.length);
+    reference.familly = String(req.body.familly);
+    reference.category = String(req.body.category);
+    reference.image = String('/uploads/' + fileNameToJPG(req.file.filename));
 
     reference.create();
 

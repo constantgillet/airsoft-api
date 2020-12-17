@@ -9,6 +9,8 @@ export = async (req: any, res: any) => {
     //Set limit if it ewists in parameters, set to 8 if not
     let limit: number = Number(req.query.limit) || 8;
 
+    let orderBy: string | null = req.query.order_by
+
     /**
      * QUERY FOR SEARCHING NAME
      */
@@ -32,9 +34,70 @@ export = async (req: any, res: any) => {
         }
     }
 
+    /**
+     * SORT
+     */
+    let _sort: Array<object> = [
+        { id: 'desc' }
+    ]
+
+    switch (orderBy) {
+        case 'id_asc':
+            _sort = [
+                { id: 'asc' }
+            ]
+            break;
+
+        case 'price_asc':
+            _sort = [
+                { price: 'asc' }
+            ]
+            break;
+
+        case 'power_asc':
+            _sort = [
+                { power: 'asc' }
+            ]
+            break;
+
+        case 'power_desc':
+            _sort = [
+                { power: 'desc' }
+            ]
+            break;
+
+        case 'weight_asc':
+            _sort = [
+                { weight: 'asc' }
+            ]
+            break;
+
+        case 'weight_desc':
+            _sort = [
+                { weight: 'desc' }
+            ]
+            break;
+
+        case 'length_asc':
+            _sort = [
+                { length: 'asc' }
+            ]
+            break;
+
+        case 'length_desc':
+            _sort = [
+                { length: 'desc' }
+            ]
+            break;
+    
+        default:
+            break;
+    }
+
     let body = {
         size: limit,
-        from: 0, 
+        from: 0,
+        sort: _sort,
         query: {
             bool: {
                 must : _must
