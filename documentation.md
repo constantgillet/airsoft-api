@@ -8,9 +8,7 @@ These docs describe how to use the [Gophish](https://getgophish.com) API. We hop
 
 ## Use Cases
 
-There are many reasons to use the Gophish API. The most common use case is to gather report information for a given campaign, so that you can build custom reports in software you're most familiar with, such as Excel or Numbers.
-
-However, automating the creation of campaigns and campaign attributes such as templates, landing pages, and more provides the ability to create a fully automated phishing simulation program. This would allow campaigns to be run throughout the year automatically. This also allows the Gophish administrator to be included in the campaigns, since they wouldn't know exactly which day it would start!
+There are many reasons to use the Airsoft Api. The first is that this Api allows access to a large database of airsoft replicas, with a lot of data available. The purpose of this API is to use it on your e-commerce sites in order to facilitate the referencing of the replicas or to automate certain tasks such as the choice of packages to facilitate the sending or the self-filling of the replica's characteristics from a few elements.
 
 ## Routes
 
@@ -62,7 +60,7 @@ GET /references/:id
 | `id` | `number` | **Required**. The id of the reference that you want getting data |
 
 
-**Response**
+**Response example**
 
 ```javascript
 {
