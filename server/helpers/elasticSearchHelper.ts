@@ -3,8 +3,6 @@ import db from './dbConfig';
 
 export const parseESResultHits = (resultHits: any):Array<Object> | boolean => {
 
-    console.log('test')
-
     const results:Array<Object> = [];
 
     resultHits.forEach((element: any) => {
@@ -12,8 +10,6 @@ export const parseESResultHits = (resultHits: any):Array<Object> | boolean => {
     });
     return results;
 }
-
-
 
 export const syncElasticToMysql = () => {
     const references: Array<Object> = [];
@@ -26,7 +22,7 @@ export const syncElasticToMysql = () => {
 
             const bulk: Array<Object> = [];
 
-            references.forEach((annonce: {id?: Number}) =>{
+            references.forEach((annonce: any) =>{
                 bulk.push({
                     index:
                         { 
@@ -35,7 +31,13 @@ export const syncElasticToMysql = () => {
                             _id: annonce.id
                         }          
                     })
-                bulk.push(annonce)
+                bulk.push({
+                    ...annonce,
+                    power: Number(annonce.power),
+                    price: Number(annonce.price),
+                    weight: Number(annonce.weight),
+                    length: Number(annonce.length),
+                })
             })
 
             //perform bulk indexing of the data passed

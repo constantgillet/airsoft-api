@@ -19,6 +19,40 @@
         @include text-hugebody;
     };
 }
+
+// Page pricing
+
+.pricing-card-container-2{
+    text-align: left;
+    border-radius: $radius_2;
+    padding: 2%;
+    margin: 0 auto 5vh auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex-flow: row wrap;
+    h4{
+        padding: 2%;
+        text-align: center;
+        @include text-subtitle;
+        width: 100%;
+    }
+    div{
+        padding: 2%;
+        @include text-hugebody;
+        font-weight: 600;
+        width: 40%;
+    }
+    ul{
+        width: 50%;
+    }
+    li{
+        padding: 1%;
+        text-align: left;
+        @include text-hugebody;
+    };
+}
 .blue{
     background: linear-gradient(0deg, rgba(20, 108, 218, 0.67), rgba(20, 108, 218, 0.67)),url('/images/spectnaz_bg.png');
     color: $white;

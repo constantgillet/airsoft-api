@@ -100,8 +100,7 @@ export default function HomePage() {
                 <div className="pricing-button">
                     <LinkPage 
                         className="button-blue"
-                        //Go to pricing page
-                        link="/pricing-page"
+                        link="/PricingPage"
                         alt="link"
                         text="Les tarifs"
                     />
