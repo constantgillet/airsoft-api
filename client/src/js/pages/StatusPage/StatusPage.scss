@@ -1,0 +1,16 @@
+.main-container {
+    width: 80%;
+    margin: 4rem auto;
+    padding: 3rem 0;
+    background-color: $white;
+
+    .sub-container {
+        width: 80%;
+        margin: 0 auto;
+
+        h1 {
+            @include text-hugebody;
+            margin-bottom: 2rem;
+        }
+    }
+}

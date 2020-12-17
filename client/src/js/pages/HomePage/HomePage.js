@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import CardComponent from '../../components/TestComponent/CardComponent'
-import DocComponent from '../../components/TestComponent/DocComponent'
+import Card from '../../components/ClassicCard/Card'
+import TextDiv from '../../components/ClassicDiv/TextDiv'
 import PricingCards from '../../components/PricingCards/PricingCards'
 import Button from '../../components/Button/Button'
 import Footer from '../../components/Footer/Footer'
@@ -21,7 +21,7 @@ export default function HomePage() {
 
             <div className="card-main-container">
                 <div className="card-container">
-                    <CardComponent
+                    <Card
                     // Normal state
                         imageUnactive="images/collaboration-unactive.svg"
                         title="Collaboration"
@@ -32,7 +32,7 @@ export default function HomePage() {
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
                         imageUnactive="images/fiability-unactive.svg"
                         title="Fiabilité"
@@ -42,7 +42,7 @@ export default function HomePage() {
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
                         imageUnactive="images/simplicity-unactive.svg"
                         title="Simplicité"
@@ -53,7 +53,7 @@ export default function HomePage() {
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
                         imageUnactive="images/complete-unactive.svg"
                         title="Complète"
@@ -64,7 +64,7 @@ export default function HomePage() {
                 </div>
             </div>
 
-            <DocComponent
+            <TextDiv
                 title="Informations complémentaires sur l'API"
                 subtitle="Complétez votre site avec notre API"
                 bodyTitle="Airsoft API permet de récupérer simplement les informations concernant les répliques d'airsoft"
