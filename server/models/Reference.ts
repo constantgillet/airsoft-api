@@ -1,4 +1,5 @@
-import db from '../helpers/dbConfig'
+import db from '../helpers/dbConfig';
+import elasticSearchClient from '../helpers/elasticSearchClient';
 
 type Status = -1 | 0 | 1 // -1 banned, 0 not verified, 1 verified  
 
@@ -37,12 +38,43 @@ export default class Reference {
 
         try {
 
-            const [result] = await db.promise().execute(`INSERT INTO ${this.tableName} (name, category, brand, power, price, weight, length, familly, image) VALUES (?,?,?,?,?,?,?,?,?)`, 
+            const [_result] = await db.promise().execute(`INSERT INTO ${this.tableName} (name, category, brand, power, price, weight, length, familly, image) VALUES (?,?,?,?,?,?,?,?,?)`, 
             [this.name, this.category, this.brand, this.power, this.price, this.weight, this.length, this.familly, this.image]);
+
+            const result: any = _result
 
             if (result) {
                 //this.id = result.insertId;
-                console.log('ok')
+                console.log(result, result.insertId)
+                this.id = result.insertId
+                const id:any = this.id;
+                const status:any = this.status;
+
+                elasticSearchClient.index({
+                    index: 'airsoft-api-references',
+                    id: id,
+                    type: 'object',
+                    body: {
+                        id: this.id,
+                        name: this.name,
+                        category: this.category,
+                        status: String(this.status),
+                        brand: this.brand,
+                        power: this.power,
+                        price: this.price,
+                        weight: this.weight,
+                        length: this.length,
+                        familly: this.familly,
+                        image: this.image 
+                    },
+                }, (err) => {
+                    //console.log(resp);
+
+                    if (err) {
+                      console.log(err)  
+                      return false;
+                    }
+                });
 
                 return true;
             } else {

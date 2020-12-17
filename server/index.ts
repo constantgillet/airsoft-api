@@ -5,6 +5,7 @@ dotenv.config();
 import express from 'express';
 import bodyParser from 'body-parser';
 import { router } from './routes';
+import { syncElasticToMysql } from './helpers/elasticSearchHelper';
 
 // rest of the code remains same
 const app = express();
@@ -21,3 +22,5 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads/')));
 app.listen(PORT, () => {
   console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
+
+syncElasticToMysql();
