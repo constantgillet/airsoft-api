@@ -1,9 +1,9 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import CardComponent from '../../components/TestComponent/CardComponent'
-import DocComponent from '../../components/TestComponent/DocComponent'
+import Card from '../../components/ClassicCard/Card'
+import TextDiv from '../../components/ClassicDiv/TextDiv'
 import PricingCards from '../../components/PricingCards/PricingCards'
-import Button from '../../components/Button/Button'
+import LinkPage from '../../components/LinkPages/LinkPages'
 import Footer from '../../components/Footer/Footer'
 import './HomePage.scss'
 
@@ -21,50 +21,50 @@ export default function HomePage() {
 
             <div className="card-main-container">
                 <div className="card-container">
-                    <CardComponent
+                    <Card
                     // Normal state
                         imageUnactive="images/collaboration-unactive.svg"
                         title="Collaboration"
                     // On mouseOver
                         imageActive="images/collaboration-active.svg"
-                        body="C du lorem ipsum ça wallah C du lorem ipsum"
+                        body="API collaborative dont les données sont implémentées par l'équipe comme par vous. Ce qui permet d'avoir la base de données la plus complète possible, et avec des mises à jour quotidiennes"
                     />
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageUnactive="images/fiability-unactive.svg"
+                        title="Fiabilité"
+                        imageActive="images/fiability-active.svg"
+                        body="Les données sont vérifiées par une équipe de modération afin de confirmer la fiabilité des données. Ainsi, les utilisateurs disposent tout le temps d'une base de données dont ils peuvent avoir confiance"
                     />
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
+                        imageUnactive="images/simplicity-unactive.svg"
+                        title="Simplicité"
                     // On mouseOver
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageActive="images/simplicity-active.svg"
+                        body="Cette API est très simple d’utilisation ! Vous pouvez récuperer les données avec de simples requettes."
                     />
 
                     <div className="card-separator"></div>
 
-                    <CardComponent
+                    <Card
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
+                        imageUnactive="images/complete-unactive.svg"
+                        title="Complète"
                     // On mouseOver
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageActive="images/complete-active.svg"
+                        body="Cette Api recense de nombreuses répliques d’airsoft en fournissant des informations utiles et précises venant de sources vérifiées."
                     />
                 </div>
             </div>
 
-            <DocComponent
+            <TextDiv
                 title="Informations complémentaires sur l'API"
                 subtitle="Complétez votre site avec notre API"
                 bodyTitle="Airsoft API permet de récupérer simplement les informations concernant les répliques d'airsoft"
@@ -98,7 +98,7 @@ export default function HomePage() {
                     />
                 </div>
                 <div className="pricing-button">
-                    <Button 
+                    <LinkPage 
                         className="button-blue"
                         //Go to pricing page
                         link="/pricing-page"

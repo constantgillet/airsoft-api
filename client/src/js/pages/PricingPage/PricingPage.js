@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
-import Button from '../../components/Button/Button'
+import LinkPage from '../../components/LinkPages/LinkPages'
 import Footer from '../../components/Footer/Footer'
 import PricingCards from '../../components/PricingCards/PricingCards'
 import './PricingPage.scss'
@@ -41,7 +41,7 @@ export default function PricingPage() {
                     />
                 </div>
                 <div className="pricing-button">
-                    <Button 
+                    <LinkPage 
                         className="button-blue"
                         //Go to pricing page
                         link="/pricing-page"

@@ -1,7 +1,7 @@
 import React from 'react'
-import './DocComponent.scss'
+import './TextDiv.scss'
 
-export default function DocContainer({title, subtitle, bodyTitle, body1, body2, button}) {
+export default function TextDiv({title, subtitle, bodyTitle, body1, body2, button}) {
   return (
       <div className="doc-main-component">
         <div className="doc-component">
