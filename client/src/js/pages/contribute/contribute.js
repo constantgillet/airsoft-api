@@ -2,9 +2,9 @@ import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import Form from '../../components/AddGunForm/AddGunForm'
-import './AddGunPage.scss'
+import './contribute.scss'
 
-export default function AddGunPage() {
+export default function contribute() {
 
     return (
         <div className="home-page">
