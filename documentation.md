@@ -20,6 +20,10 @@ Use this route for adding a reference to the database
 ```http
 POST /references
 ```
+
+**Body Content-Type**
+* multipart/form-data
+
 **Parameters**
 
 | Parameter | Type | Description |
@@ -47,7 +51,7 @@ POST /references
 
 ### Get a reference
 
-Use this route for getting a reference from the database
+Use this route for getting a specific reference from the database
 
 **Route**
 ```http
@@ -58,7 +62,6 @@ GET /references/:id
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `id` | `number` | **Required**. The id of the reference that you want getting data |
-
 
 **Response example**
 
@@ -84,6 +87,49 @@ GET /references/:id
 }
 ```
 
+### Get all the reference
+
+Use this route for getting and searching mutiples references from the database
+
+**Route**
+```http
+GET /references
+```
+**Parameters**
+
+| Parameter | Type | Description |
+| :--- | :--- | :--- |
+| `q` | `string` | **Required**. The query to search a reference |
+| `limit` | `number` | **Required**. The number of results, the base value is 8 |
+| `order_by` | `string` | **Required**. How to order the results |
+| `category` | `string` | **Required**. The category of the references that you search|
+
+**Response example**
+
+```javascript
+{
+  "code": 200,
+  "status": "success",
+  "message": "You got the references",
+  "data": {
+    "references": [
+       {
+        "id": 3,
+        "name": "Name of the reference",
+        "category": "referenceCategory",
+        "status": 0,
+        "brand": "cybergun",
+        "power": 222,
+        "price": 600,
+        "weight": 200,
+        "length": 1234,
+        "familly": "bullpup",
+        "image": "/uploads/2020-12-17T14-57-26.013Zlogo2.jpg"
+      },
+    ]
+  }
+}
+```
 
 ## Responses
 
@@ -98,15 +144,17 @@ Many API endpoints return the JSON representation of the resources created or ed
 }
 ```
 
-The `message` attribute contains a message commonly used to indicate errors or, in the case of deleting a resource, success that the resource was properly deleted.
+The `code` attribute is the status code.
 
-The `success` attribute describes if the transaction was successful or not.
+The `status` attribute describes if the request was successful or not.
+
+The `message` attribute contains a message commonly used to indicate errors or, in the case of deleting a resource, success that the resource was properly deleted.
 
 The `data` attribute contains any other metadata associated with the response. This will be an escaped string containing JSON data.
 
 ## Status Codes
 
-Gophish returns the following status codes in its API:
+The airsoft API returns the following status codes in its API:
 
 | Status Code | Description |
 | :--- | :--- |
