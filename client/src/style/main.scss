@@ -40,39 +40,7 @@ body {
     h1{
         color: $white;
         font-size: 48px;
-        font-weight: 800;
-    }
-}
-
-.pricing-main-container{
-    width: 100%;
-    margin-bottom: 10vh;
-    .pricing-title{
-        position: relative;
-        text-align: center;
-        font-weight: 650;
-        font-size: 36px;
-        margin-bottom: 10vh;
-        .pricing-line{
-            background-color: $primary;
-            top: 50%;
-            left: -15%;
-            position: absolute;
-            height: 1px;
-            width: 50%;
-            margin: 5px 0 10px 0;
-        }
-    }
-    .pricing-cards{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto;
-        width: 75%;
-    }
-    .pricing-button{
-        width: 100%;
-        margin: 7vh 0;
-        text-align: center;
+        font-weight: 700;
     }
 }
 
