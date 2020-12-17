@@ -5,12 +5,14 @@ export = async (req: any, res: any) => {
 
     const query = req.query['q'];
 
+
+    /**
+     * QUERY FOR SEARCHING NAME
+     */
     interface Must {
         match?: object,
         match_all?: object
     }
-
-
 
     let _must: Must = {
         match: {               
@@ -26,22 +28,13 @@ export = async (req: any, res: any) => {
             match_all: {}
         }
     }
-    
-    //Filters, type object
-    const _filters: { term?: object, terms?: object }[] = [
-        {term : { status : '1' }}
-    ]
 
-    // declare the query object to search elastic search and return only 200 results from the first result found. 
-    // also match any data where the name is like the query string sent in
     let body = {
         size: 8,
         from: 0, 
         query: {
             bool: {
-                must : {
-                    match_all: {}
-                },
+                must : _must
             }
         }
     }

@@ -8,6 +8,7 @@ import getAllReferencesController from './controllers/getAllReferences.controlle
 import {addReferenceValidation} from './validators/addReference.validator';
 import {addReferenceUpload} from './validators/uploadReference.validator';
 import {getReferenceValidation} from './validators/getReference.validator';
+import {getAllReferencesValidation} from './validators/getAllReferences.validator';
 
 /**
  * ROUTES
@@ -17,7 +18,7 @@ import {getReferenceValidation} from './validators/getReference.validator';
 router.post('/references', addReferenceUpload, addReferenceValidation, addReferenceController);
 
 //Get references
-router.get('/references', getAllReferencesController);
+router.get('/references', getAllReferencesValidation, getAllReferencesController);
 
 //Get references
 router.get('/references/:id', getReferenceValidation, getReferenceController);

@@ -13,8 +13,6 @@ export const parseESResultHits = (resultHits: any):Array<Object> | boolean => {
     return results;
 }
 
-
-
 export const syncElasticToMysql = () => {
     const references: Array<Object> = [];
 
