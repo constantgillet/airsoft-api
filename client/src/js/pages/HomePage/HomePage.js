@@ -21,39 +21,39 @@ export default function HomePage() {
                         title="Collaboration"
                     // On mouseOver
                         imageActive="images/collaboration-active.svg"
-                        body="C du lorem ipsum ça wallah C du lorem ipsum"
+                        body="API collaborative dont les données sont implémentées par l'équipe comme par vous. Ce qui permet d'avoir la base de données la plus complète possible, et avec des mises à jour quotidiennes"
                     />
 
                     <div className="card-separator"></div>
 
                     <CardComponent
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageUnactive="images/fiability-unactive.svg"
+                        title="Fiabilité"
+                        imageActive="images/fiability-active.svg"
+                        body="Les données sont vérifiées par une équipe de modération afin de confirmer la fiabilité des données. Ainsi, les utilisateurs disposent tout le temps d'une base de données dont ils peuvent avoir confiance"
                     />
 
                     <div className="card-separator"></div>
 
                     <CardComponent
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
+                        imageUnactive="images/simplicity-unactive.svg"
+                        title="Simplicité"
                     // On mouseOver
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageActive="images/simplicity-active.svg"
+                        body="Cette API est très simple d’utilisation ! Vous pouvez récuperer les données avec de simples requettes."
                     />
 
                     <div className="card-separator"></div>
 
                     <CardComponent
                     // Normal state
-                        imageUnactive="images/collaboration-unactive.svg"
-                        title="Collaboration"
+                        imageUnactive="images/complete-unactive.svg"
+                        title="Complète"
                     // On mouseOver
-                        imageActive="images/collaboration-active.svg"
-                        body="C du lorem ça wallah C du lorem ipsum ça wallah"
+                        imageActive="images/complete-active.svg"
+                        body="Cette Api recense de nombreuses répliques d’airsoft en fournissant des informations utiles et précises venant de sources vérifiées."
                     />
                 </div>
             </div>
