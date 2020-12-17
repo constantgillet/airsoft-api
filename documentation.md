@@ -1,10 +1,8 @@
 # Introduction
 
-Gophish was built from the ground-up with a JSON API that makes it easy for developers and sysadmins to automate simulated phishing campaigns.
+Airsoft's api was built from the ground up with a JSON API that allows developers to easily retrieve data for different uses.
 
-These docs describe how to use the [Gophish](https://getgophish.com) API. We hope you enjoy these docs, and please don't hesitate to [file an issue](https://github.com/gophish/gophish/issues/new) if you see anything missing.
-
-
+These documents describe how to use the Airsoft api. We hope you enjoy these documents, and feel free to send us a number if you find something missing.
 
 ## Use Cases
 
@@ -83,7 +81,6 @@ GET /references/:id
     "familly": "bullpup",
     "image": "/uploads/image.jpg"       
   }
-  
 }
 ```
 
