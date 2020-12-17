@@ -12,25 +12,25 @@ export default function Header() {
             <div className="link_container">
                 <LinkPage 
                     className="button-link-header"
-                    link="/Documentation"
+                    link="/documentation"
                     alt="Documentation"
                     text="Documentation"
                 />
                 <LinkPage 
                     className="button-link-header"
-                    link="/StatusPage"
+                    link="/status"
                     alt="statut"
                     text="Statut"
                 />
                 <LinkPage 
                     className="button-link-header"
-                    link="/PricingPage"
+                    link="/pricing"
                     alt="Pricing"
                     text="Pricing"
                 />
                 <LinkPage 
                     className="button-blue"
-                    link="/Contribute"
+                    link="/contribute"
                     alt="Contribuer"
                     text="Contribuer"
                 />

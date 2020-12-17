@@ -17,7 +17,7 @@ export default function TextDiv({title, subtitle, bodyTitle, body1, body2, butto
             <div className="doc-button-container">
               <LinkPage 
                 className="doc-button"
-                link="/Documentation"
+                link="/documentation"
                 alt="Doc"
                 text={button}
               />

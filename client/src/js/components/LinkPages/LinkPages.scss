@@ -10,6 +10,7 @@
     background-color: $white;
     color: $primary;
     text-decoration: none;
+    border: 1px solid $primary;
 }
 .button-border-white{
     margin-top: 1rem;
@@ -52,5 +53,5 @@
 .absolute-2{
     position: absolute;
     right: 20%;
-    top: 90%;
+    top: 88%;
 }

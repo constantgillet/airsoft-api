@@ -31,6 +31,32 @@
         justify-content: space-between;
         width: 100%;
         height: 30%;
+        .footer_elements{
+            padding: $padding_medium 0;
+            width: 20%;
+            .title {
+                color: $white;
+                @include text-hugebody;
+                font-weight: 700;
+                img{
+                    width: 100px;
+                }
+            }
+            .underline{
+                background-color: $primary;
+                height: 1px;
+                width: 40%;
+                margin: 5px 0 10px 0;
+                margin-bottom: 2vh;        
+            }
+            .description{
+                color: $white;
+                @include text-body;
+            }
+            a{
+                color: $white;
+            }
+        }
     }
     .copyright{
         background-color: rgba($color: #000000, $alpha: 0.2);

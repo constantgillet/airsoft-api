@@ -1,6 +1,6 @@
 import React from 'react'
-import FooterElements from '../../components/Footer/FooterElements/FooterElements'
 import './Footer.scss'
+import LinkPage from '../../components/LinkPages/LinkPages'
 const logo_white = <img src="/images/logo_white.png" alt="logo_white"></img>
 
 export default function Footer() {
@@ -22,11 +22,58 @@ export default function Footer() {
                 </div>
             </div>
             <div className="footer-content container">
-                <FooterElements title={logo_white} description="UpGear est une plateforme de matériel d'airsoft d'occasion. Achetez et vendez votre équipement au meilleur prix !" />
-                <FooterElements title="Catégories" description="ouiOUIOUIOUOIUOIUOI" />
-                <FooterElements title="Liens utiles" description="ouiOUIOUIOUOIUOIUOI" />
-                <FooterElements title="Contacts" description="ouiOUIOUIOUOIUOIUOI" />
-                
+                <div className="footer_elements">
+                    <div className="title">{logo_white}</div>
+                    <div className="underline"></div>
+                    <p className="description">UpGear est une plateforme de matériel d'airsoft d'occasion. Achetez et vendez votre équipement au meilleur prix !</p>
+                </div>
+                <div className="footer_elements">
+                    <div className="title">Pages de l'API</div>
+                    <div className="underline"></div>
+                    <div className="description">
+                        <p><LinkPage 
+                            className=""
+                            link="/documentation"
+                            alt="Documentation"
+                            text="Documentation"
+                        /></p>
+                        <p><LinkPage 
+                            className=""
+                            link="/status"
+                            alt="Status"
+                            text="Statut"
+                        /></p>
+                        <p><LinkPage 
+                            className=" "
+                            link="/pricing"
+                            alt="Pricing"
+                            text="Pricing"
+                        /></p>
+                        <p><LinkPage 
+                            className=""
+                            link="/contribute"
+                            alt="contribute"
+                            text="Contribuer"
+                        /></p>
+                    </div>
+                </div>
+                <div className="footer_elements">
+                    <div className="title">Liens utiles</div>
+                    <div className="underline"></div>
+                    <div className="description">
+                        <p> <a href="#">Nous contacter</a></p>
+                        <p> <a href="https://upgear.fr/CGU">CGU</a></p>
+                        <p> <a href="#">Aide</a></p>
+                    </div>
+                </div>
+                <div className="footer_elements">
+                    <div className="title">Contact</div>
+                    <div className="underline"></div>
+                    <div className="description">
+                        <p> <i className="fas fa-map-marker-alt mr-3"></i> Paris, France</p>
+                        <p> <i className="fas fa-envelope mr-3"></i> <a href="#">contact@upgear.fr</a></p>
+                    </div>
+                </div>
             </div>
             <div className="copyright">
                 © 2020 Copyright: <span>upgear.fr</span>

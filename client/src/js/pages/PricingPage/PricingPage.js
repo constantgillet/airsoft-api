@@ -6,7 +6,6 @@ import PricingCards from '../../components/PricingCards/PricingCards'
 import './PricingPage.scss'
 
 export default function PricingPage() {
-
     return (
         <div className="home-page">
             <div className="header">
@@ -33,7 +32,7 @@ export default function PricingPage() {
                     />
                     <LinkPage 
                         className="doc-button absolute"
-                        link="/Contribute"
+                        link="/contribute"
                         alt="contribute"
                         text="Contribuer"
                     />
@@ -52,15 +51,6 @@ export default function PricingPage() {
                         text="Nous contacter"
                     />
                 </div>
-                {/* <div className="pricing-button">
-                    <LinkPage 
-                        className="button-blue"
-                        //Go to pricing page
-                        link="/pricing-page"
-                        alt="link"
-                        text="Les tarifs"
-                    />
-                </div> */}
             </div>
 
             <div className="footer">
