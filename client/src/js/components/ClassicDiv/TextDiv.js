@@ -15,12 +15,7 @@ export default function TextDiv({title, subtitle, bodyTitle, body1, body2, butto
             <p>{body1}</p>
             <p>{body2}</p>
             <div className="doc-button-container">
-              <LinkPage 
-                className="doc-button"
-                link="/documentation"
-                alt="Doc"
-                text={button}
-              />
+              <a href="https://github.com/constantgillet/airsoft-api" target="_blank" rel="nofollow" className="doc-button">Documentation</a>
             </div>
           </div>
         </div>

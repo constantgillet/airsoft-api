@@ -31,12 +31,7 @@ export default function Footer() {
                     <div className="title">Pages de l'API</div>
                     <div className="underline"></div>
                     <div className="description">
-                        <p><LinkPage 
-                            className=""
-                            link="/documentation"
-                            alt="Documentation"
-                            text="Documentation"
-                        /></p>
+                        <p><a href="https://github.com/constantgillet/airsoft-api" target="_blank" rel="nofollow" className="">Documentation</a></p>
                         <p><LinkPage 
                             className=""
                             link="/status"
