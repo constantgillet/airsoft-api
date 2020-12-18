@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
-app.set('trust proxy', 1);
+//app.set('trust proxy', 1);
 
 // enable CORS 
 app.use((req, res, next) => {
