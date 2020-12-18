@@ -17,7 +17,8 @@ class Form extends Component {
                 length: "",
                 category: "revolver",
                 description: "",
-                file: ""
+                file: "",
+                price: ""
             }
         }
     
@@ -72,6 +73,12 @@ class Form extends Component {
     handleFileChange = (event) => {
         this.setState({
             file: event.target.value
+        })
+    }
+
+    handlePriceChange = (event) => {
+        this.setState({
+            price: event.target.value
         })
     }
 
@@ -132,20 +139,14 @@ class Form extends Component {
                                 </div>
                                 <div className="mini-sub-container">
                                     <div className="input-container">
-                                        <label>Catégorie</label>                             
-                                        <select value={this.state.category} onChange={this.handleCategoryChange}>
-                                            <option value="Revolver">Révolver</option>
-                                            <option value="AEGRifle">Réplique longues AEG</option>
-                                            <option value="GBBRRifle">Réplique longues GBBR</option>
-                                            <option value="GGBGun">Réplique de poing GBB</option>
-                                            <option value="NBBGun">Réplique de poing NBB</option>
-                                            <option value="AEPGun">Réplique de poing AEP</option>
-                                            <option value="GasSniperRifle">Réplique de sniper gaz</option>
-                                            <option value="SpringSniperRifle">Réplique de sniper spring</option>
-                                            <option value="SpringShotgun">Réplique à pompe spring</option>
-                                            <option value="GasShotgun">Réplique à pompe gaz</option>
-                                        </select>
+                                        <label>Prix (€)</label>
+                                        <input 
+                                            type="text" 
+                                            value={this.state.price}
+                                            onChange={this.handlePriceChange}
+                                        />
                                     </div>
+                                    
                                     <div className="input-container">
                                         <label>Longueur (cm)</label>
                                         <input 
@@ -174,6 +175,22 @@ class Form extends Component {
                                 value={this.state.file}
                                 onChange={this.handleFileChange}
                             />
+                        </div>
+
+                        <div className="input-container">
+                            <label>Catégorie</label>                             
+                            <select value={this.state.category} onChange={this.handleCategoryChange}>
+                                <option value="Revolver">Révolver</option>
+                                <option value="AEGRifle">Réplique longues AEG</option>
+                                <option value="GBBRRifle">Réplique longues GBBR</option>
+                                <option value="GGBGun">Réplique de poing GBB</option>
+                                <option value="NBBGun">Réplique de poing NBB</option>
+                                <option value="AEPGun">Réplique de poing AEP</option>
+                                <option value="GasSniperRifle">Réplique de sniper gaz</option>
+                                <option value="SpringSniperRifle">Réplique de sniper spring</option>
+                                <option value="SpringShotgun">Réplique à pompe spring</option>
+                                <option value="GasShotgun">Réplique à pompe gaz</option>
+                            </select>
                         </div>
                         
                         <div className="button-container">
