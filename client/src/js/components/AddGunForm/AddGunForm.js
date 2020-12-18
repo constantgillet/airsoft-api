@@ -234,7 +234,7 @@ class Form extends Component {
                         </div>
                         
                         <div className="button-container">
-                            <button className="button-blue button-border-white button-border-white" type="submit">Valider</button>
+                            <button className="button-blue-form button-border-white button-border-white" type="submit">Valider</button>
                         </div>
                     </div>
 

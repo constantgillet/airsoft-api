@@ -19,7 +19,7 @@ export default function HomePage() {
                 <h1>Airsoft API</h1>
             </div>
 
-            <div className="card-main-container">
+            <div className="card-main-container container">
                 <div className="card-container">
                     <Card
                     // Normal state
@@ -74,7 +74,7 @@ export default function HomePage() {
                 button="Documentation"
             />
 
-            <div className="pricing-main-container">
+            <div className="pricing-main-container container">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
                     Tarifs et plans
@@ -99,7 +99,7 @@ export default function HomePage() {
                 </div>
                 <div className="pricing-button">
                     <LinkPage 
-                        className="button-blue"
+                        className="button-blue-big"
                         link="/pricing"
                         alt="link"
                         text="Les tarifs"

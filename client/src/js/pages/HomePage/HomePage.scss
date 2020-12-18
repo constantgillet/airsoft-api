@@ -37,10 +37,10 @@
             .pricing-line{
                 background-color: $primary;
                 top: 50%;
-                left: -15%;
+                left: -55%;
                 position: absolute;
                 height: 1px;
-                width: 50%;
+                width: 90%;
                 margin: 5px 0 10px 0;
             }
         }
@@ -48,10 +48,9 @@
             display: flex;
             justify-content: center;
             margin: 0 auto;
-            width: 75%;
+            width: 100%;
         }
         .pricing-button{
-            width: 100%;
             margin: 7vh 0;
             text-align: center;
         }

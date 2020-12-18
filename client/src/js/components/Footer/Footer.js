@@ -64,7 +64,7 @@ export default function Footer() {
                         <p> <a href="#">Nous contacter</a></p>
                         <p> <a href="https://upgear.fr/CGU">CGU</a></p>
                         <p> <a href="#">Aide</a></p>
-                        <p> <a href="#">Github</a></p>
+                        <p> <a href="https://github.com/constantgillet/airsoft-api">Github</a></p>
                     </div>
                 </div>
                 <div className="footer_elements">
