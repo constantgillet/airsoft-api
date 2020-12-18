@@ -88,7 +88,7 @@ class Form extends Component {
         const body = {
             name: this.state.gunName,
             reference: this.state.reference,
-            brand: this.state.reference,
+            brand: this.state.manufacturer,
             power: this.state.power,
             weight: this.state.weight,
             length: this.state.length,
