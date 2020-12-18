@@ -7,7 +7,7 @@ export const addReferenceValidation = [
         .withMessage({name: 'missingName', message: 'There is no name.'})
         .trim()
         .isString()
-        .isLength({min: 4, max: 32})
+        .isLength({min: 2, max: 32})
         .withMessage({name: 'invalidNameLength', message: 'Name length is invalid.'}),
 
     check('category')
@@ -19,7 +19,7 @@ export const addReferenceValidation = [
         .withMessage({name: 'missingBrand', message: 'There is no brand.'})
         .trim()
         .isString()
-        .isLength({min: 3, max: 32})
+        .isLength({min: 2, max: 32})
         .withMessage({name: 'invalidBrandLength', message: 'Name length is invalid.'}),
 
     check('power')
@@ -37,14 +37,14 @@ export const addReferenceValidation = [
     check('weight')
         .exists()
         .withMessage({name: 'missingWeight', message: 'There is no weight.'})
-        .isFloat({min: 5, max: 2000})
+        .isFloat({min: 50, max: 9000})
         .withMessage({name: 'invalidWeightValue', message: 'There is no weight value'}),
 
     check('length')
         .exists()
         .withMessage({name: 'missingLength', message: 'There is no length.'})
-        .isFloat({min: 5, max: 2000})
-        .withMessage({name: 'invalidLength', message: 'There is no length value'}),
+        .isFloat({min: 5, max: 150})
+        .withMessage({name: 'invalidLength', message: 'Invalid length valid'}),
     
     check('familly')
         .exists()
