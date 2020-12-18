@@ -123,6 +123,7 @@ class Form extends Component {
         })
         .catch(err => {
             console.error(err)
+            toastr.error("Erreur lors de l'ajout de la référence")
         })
     }
 
