@@ -2,13 +2,24 @@
     color: $white;
     background-color: $primary;
     border-radius: $radius_1;
-    padding: $padding_soft $padding_medium;
+    padding: 8px 40px;
     font-weight: 700;
     text-decoration: none;
     transition-duration: 0.3s;
     border:  1px solid $primary;
 }
-.button-blue:hover{
+.button-blue-big{
+    color: $white;
+    background-color: $primary;
+    border-radius: $radius_1;
+    padding: 8px 40px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.3s;
+    border:  1px solid $primary;
+}
+.button-blue:hover, .button-blue-big:hover{
     background-color: $white;
     color: $primary;
     text-decoration: none;
@@ -50,11 +61,11 @@
 }
 .absolute{
     position: absolute;
-    right: 20%;
-    top: 32.8%;
+    right: 12%;
+    top: 30.8%;
 }
 .absolute-2{
     position: absolute;
-    right: 20%;
-    top: 88%;
+    right: 10%;
+    top: 89%;
 }

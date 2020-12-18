@@ -16,7 +16,7 @@ export default function PricingPage() {
                 <h1>Pricing</h1>
             </div>
 
-            <div className="pricing-main-container margin-top">
+            <div className="pricing-main-container margin-top container">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
                     Tarifs et plans
