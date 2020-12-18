@@ -31,12 +31,7 @@ export default function Footer() {
                     <div className="title">Pages de l'API</div>
                     <div className="underline"></div>
                     <div className="description">
-                        <p><LinkPage 
-                            className=""
-                            link="/documentation"
-                            alt="Documentation"
-                            text="Documentation"
-                        /></p>
+                        <p><a href="https://github.com/constantgillet/airsoft-api/blob/master/documentation.md" target="_blank" rel="nofollow" className="">Documentation</a></p>
                         <p><LinkPage 
                             className=""
                             link="/status"
@@ -64,7 +59,7 @@ export default function Footer() {
                         <p> <a href="#">Nous contacter</a></p>
                         <p> <a href="https://upgear.fr/CGU">CGU</a></p>
                         <p> <a href="#">Aide</a></p>
-                        <p> <a href="#">Github</a></p>
+                        <p> <a href="https://github.com/constantgillet/airsoft-api">Github</a></p>
                     </div>
                 </div>
                 <div className="footer_elements">

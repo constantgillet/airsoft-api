@@ -19,7 +19,7 @@ export default function HomePage() {
                 <h1>Airsoft API</h1>
             </div>
 
-            <div className="card-main-container">
+            <div className="card-main-container container">
                 <div className="card-container">
                     <Card
                     // Normal state
@@ -74,7 +74,7 @@ export default function HomePage() {
                 button="Documentation"
             />
 
-            <div className="pricing-main-container">
+            <div className="pricing-main-container container">
                 <h2 className="pricing-title">
                     <div className="pricing-line"></div>
                     Tarifs et plans
@@ -92,14 +92,14 @@ export default function HomePage() {
                         className="pricing-card-container white"
                         title="Abonnement"
                         subtitle="Abonnez vous pour profiter des avantages"
-                        firstArgument="Accédez à l'API en illimité pour XX€ par mois"
-                        secondArgument="Payez à l'utilisation afin d'avoir plus de flexibilités"
+                        firstArgument="Accédez à l'API en illimité pour 7€ par mois"
+                        secondArgument="Payez 70€ par an afin de profiter d'une réduction"
                         description="Accédez à notre service sans avoir besoin de contribuer"
                     />
                 </div>
                 <div className="pricing-button">
                     <LinkPage 
-                        className="button-blue"
+                        className="button-blue-big"
                         link="/pricing"
                         alt="link"
                         text="Les tarifs"

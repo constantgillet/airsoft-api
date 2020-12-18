@@ -16,7 +16,7 @@ module.exports = {
         useLocalIp: true,
         historyApiFallback: true,
         proxy: {
-            '/api': 'http://localhost:8000',
+            '/references': 'http://localhost:8000',
             '/uploads': 'http://localhost:8000'
         }
     },

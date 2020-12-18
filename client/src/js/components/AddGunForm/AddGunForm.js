@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './AddGunForm.scss'
 import 'bootstrap-select';
-
+import toastr from 'toastr'
 
 class Form extends Component {
     
@@ -72,7 +72,7 @@ class Form extends Component {
 
     handleFileChange = (event) => {
         this.setState({
-            file: event.target.value
+            file: event.target.files[0]
         })
     }
 
@@ -84,6 +84,46 @@ class Form extends Component {
 
     handleSubmit= (event) => {
         event.preventDefault()
+
+        const body = {
+            name: this.state.gunName,
+            reference: this.state.reference,
+            brand: this.state.reference,
+            power: this.state.power,
+            weight: this.state.weight,
+            length: this.state.length,
+            category: this.state.category,
+            description: this.state.description,
+            image: this.state.file,
+            price: this.state.price,
+            email: "test@test.fr",
+            familly: "cybergun"
+        }
+
+        const formData = new FormData();
+
+        Object.keys(body).map((key, index) => {
+            formData.append(key, body[key])
+        });
+
+        fetch("/references", {
+            method: "POST",
+            body: formData
+        })
+        .then(r => r.json())
+        .then(data => {
+
+            if (data.status == "success") {
+                toastr.success("La référence a été ajoutée")
+            } else {
+                toastr.error("Erreur lors de l'ajout de la référence")
+            }
+
+            console.log(data)
+        })
+        .catch(err => {
+            console.error(err)
+        })
     }
 
     render() {
@@ -171,7 +211,7 @@ class Form extends Component {
                             <label>Joindre une image</label>
                             <input
                                 type="file"
-                                value={this.state.file}
+                                accept="image/x-png,image/jpeg"
                                 onChange={this.handleFileChange}
                             />
                         </div>
@@ -193,7 +233,7 @@ class Form extends Component {
                         </div>
                         
                         <div className="button-container">
-                            <button className="button-blue button-border-white button-border-white" type="submit">Valider</button>
+                            <button className="button-blue-form button-border-white button-border-white" type="submit">Valider</button>
                         </div>
                     </div>
 

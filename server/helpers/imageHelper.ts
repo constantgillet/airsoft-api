@@ -11,7 +11,7 @@ export const resizeImage = async (imageInput: any, imageOut: any) => {
     try {
 
         await sharp(imageInput)
-            .resize(640, 320)
+            .resize(400, 400)
             .toFormat('jpeg')
             .flatten({ background: { r: 255, g: 255, b: 255 } })
             .jpeg({
