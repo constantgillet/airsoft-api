@@ -83,7 +83,6 @@ class Form extends Component {
     }
 
     handleSubmit= (event) => {
-        alert(`${this.state.gunName} ${this.state.reference} ${this.state.manufacturer} ${this.state.power} ${this.state.weight} ${this.state.length} ${this.state.category} ${this.state.description} ${this.state.file}`)
         event.preventDefault()
 
         const body = {
@@ -124,6 +123,7 @@ class Form extends Component {
         })
         .catch(err => {
             console.error(err)
+            toastr.error("Erreur lors de l'ajout de la référence")
         })
     }
 

@@ -10,7 +10,7 @@ export default function Header() {
                 <Link to="/"><img src="/images/logo.png" className="logo_img" alt="logo_img"/></Link>
             </div>
             <div className="link_container">
-                <a href="https://github.com/constantgillet/airsoft-api" target="_blank" rel="nofollow" className="button-link-header">Documentation</a>
+                <a href="https://github.com/constantgillet/airsoft-api/blob/master/documentation.md" target="_blank" rel="nofollow" className="button-link-header">Documentation</a>
                 <LinkPage 
                     className="button-link-header"
                     link="/status"
